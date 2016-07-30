@@ -1,0 +1,11 @@
+<html>
+<body>
+<form action="/scrape" method="post">
+    <input type="text" size="50" placeholder="Type in address" name="address"/>
+    <button type="submit">Submit</button>
+</form>
+{{#images}}
+{{{.}}} <!-- to keep it form escaping -->
+{{/images}}
+</body>
+</html>
