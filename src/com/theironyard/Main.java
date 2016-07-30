@@ -28,9 +28,7 @@ public class Main {
                         Elements images = doc.select("img");
                         ArrayList<String> html = new ArrayList<String>(); //make list of htmls from images
                         for (Element e : images) {
-                            if (!e.attr("src").startsWith("htto")) {
-                                e.attr("src", address + e.attr("src"));
-                            }
+                            e.attr("src", e.absUrl("src"));
                             html.add(String.format("<a href='%s' >%s</a", e.attr("src"), e.toString()));// to click on images on page
                         }
                         m.put("images", html);
